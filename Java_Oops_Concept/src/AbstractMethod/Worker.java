@@ -1,7 +1,13 @@
+package AbstractMethod;
 
-public abstract class Abstract_Concept {
+public abstract class Worker {
 	
 	public abstract void Work();
+	
+	Worker()
+	{
+		System.out.println("Its a worker constructor");
+	}
 	
 	public void hike()
 	{

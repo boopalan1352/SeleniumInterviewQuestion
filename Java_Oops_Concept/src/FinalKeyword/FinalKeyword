@@ -1,0 +1,18 @@
+Final Keyword
+
+final class - we cannot extend (ie. No Inheritance applicable)
+final method - we cannot override
+final variable - we cannot reassign (ie. constant values final int pi=3.65;). 
+Here we can use variable many times but yu cannot change value 
+
+Note : Important
+
+public abstract final class parent
+{
+//if abstract present it mean we can utilise parent method through method overriding in child class
+//if final keyword appears it mean we cannot extend class
+
+what would be the output ?
+Ans : It throw error as "Illegal combination of Modifier"
+}
+ 

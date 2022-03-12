@@ -1,0 +1,20 @@
+class is a templete
+Abstraction is a Data Hiding process
+Method without having body is called abstract method. 
+if you have one abstract method than you need to declare class as abstract class 
+Note : The abstract method will never be final because the abstract class must implement all the abstract methods.
+
+you cannot create object for Abstact class (Worker) but you can create constructor that can be access from your child class 
+Where you cannot create constructor for interface
+To utilise Abstract class we need to create sub class and define abstract method (Sub Worker)
+
+
+Note: usage of Abstract class is to give pressure to child class to implement abstract method. 
+else subclass wont create object after it got extend from abstract class.
+ie. RBI mandatory rules should be follow by all banks. its like forcing to do the job done.
+
+you can also create empty method to remove abstract like 
+public void hike()
+{
+//empty method without body
+}

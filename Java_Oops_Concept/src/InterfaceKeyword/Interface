@@ -1,0 +1,22 @@
+Interface is not a class its a Rules or Contract
+As interface is not a class so obviously we cannot create object as interface contains full of abstract methods
+interface can be public and package modifier
+
+Where you cannot create constructor for interface but you can create constructor that can be access from your child class 
+
+Important :
+By default variables are Final(ie. you cannot change value of interface in your implements class)
+Note: Even though you try to change (from i=10 to i=20) also it will give interface value (i=10)
+By default Methods are abstract(ie. all methods of interface should be implemented in child class(implements))
+By default Interface Methods are static  
+
+
+Dynamic Binding possible in Interface 
+        Company comp=new Employee();
+		comp.comeOnTime();  --> Interface class method
+		comp.takeLeave();   --> Interface class method
+		comp.getSalary();   --> Interface class method
+		comp.lesuireTime(); --> Implemented class method which cannot be access in dynamic binding
+Where (Company is interface) and (Employee is implemented class)
+Dynamic binding is that we can oly access overridden method but we cannot access implemented class methods		
+
