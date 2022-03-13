@@ -1,1 +1,8 @@
 Important class cannot be private
+if you want to access class from other package you need to import that package in your child class
+Default have the previlage to access inside package 
+
+1) private (accessible within the class where defined) 
+2) default or package-private (when no access specifier is specified) 
+3) protected (accessible only to classes that subclass your class directly within the current or different "package")
+4) public (accessible from any class)

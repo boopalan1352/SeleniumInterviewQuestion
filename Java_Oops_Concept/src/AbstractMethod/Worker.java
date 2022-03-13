@@ -9,7 +9,7 @@ public abstract class Worker {
 		System.out.println("Its a worker constructor");
 	}
 	
-	public void hike()
+	public static void hike()
 	{
 		System.out.println("Employee Hike");
 	}

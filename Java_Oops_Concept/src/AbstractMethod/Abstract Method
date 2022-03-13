@@ -1,10 +1,12 @@
 class is a templete
-Abstraction is a Data Hiding process
+Abstraction is a Data Hiding process mean showing only necessary data and hiding unwanted(here data means to methods not variable or objects)
+Abstract keyword -> can be oly used in method signature and to declare class
 Method without having body is called abstract method. 
 if you have one abstract method than you need to declare class as abstract class 
 Note : The abstract method will never be final because the abstract class must implement all the abstract methods.
 
-you cannot create object for Abstact class (Worker) but you can create constructor that can be access from your child class 
+you cannot create object for Abstact class (Worker) but you can create constructor for abstract class that can be access from your child class while creating object in child class 
+(ie. once you create object in child class where you can also access abstract class constructor(Inheritance concept)) 
 Where you cannot create constructor for interface
 To utilise Abstract class we need to create sub class and define abstract method (Sub Worker)
 
@@ -18,3 +20,12 @@ public void hike()
 {
 //empty method without body
 }
+
+Dynamic Binding is possible in Abstract class
+
+Important : 
+1. if a class is abstract you cannot create object
+2. if a sub class extends abstract class it needs to implement unimplemented abstract methods
+3. Any possiblity to access methods without creating objects in sub class from abstract class
+yes we can if we miss to unimplement abstract method than obviously yor sub class turn into abstract class so you cannot able to create object but when you change abstract class non static methods to static
+then you can call abstract class methods in subclass by using (classname.methodname) without creating object in sub class

@@ -1,18 +1,23 @@
-Interface is not a class its a Rules or Contract
+Interface is not a class its a Rules or Contract where class is a templete
 As interface is not a class so obviously we cannot create object as interface contains full of abstract methods
 interface can be public and package modifier
+Has A Relationship between interface and implements class  
 
-Where you cannot create constructor for interface but you can create constructor that can be access from your child class 
+Where you cannot create constructor for interface but you can create constructor for abstract class  that can be access from your child class 
 
 Important :
-By default variables are Final(ie. you cannot change value of interface in your implements class)
-Note: Even though you try to change (from i=10 to i=20) also it will give interface value (i=10)
+By default variables are static and Final(ie. you cannot change value of interface in your implements class, as it is statc you can call by interfaceName.variableName in implements class)
+
+Note: Even though you try to change (from i=10 to i=20) also it will give interface value (i=10). is there any possiblity to change value of interface given even its final.
+yes we can change by extending interface (extends interface mean sub interface extends interface) which you can set same i value to 20 in class which implements sub interface and have the value of i as 20.
+once class implements sub interface it needs to implement all methods in interface and also sub interface
+
 By default Methods are abstract(ie. all methods of interface should be implemented in child class(implements))
 By default Interface Methods are static  
 
 
 Dynamic Binding possible in Interface 
-        Company comp=new Employee();
+        Company comp=new Employee();  //Dynamic Binding
 		comp.comeOnTime();  --> Interface class method
 		comp.takeLeave();   --> Interface class method
 		comp.getSalary();   --> Interface class method
