@@ -1,0 +1,5 @@
+Assertion is to check the condition without using SYSOUT statements 
+Assertion can be implemented in three types
+1. asser(i=10); // It simply check the condition if its true it will execute else it will hault programm by throwing Assertion exception
+2. assert(i=10):"Message to be display" //If its fails and throw error wit will come with message provided
+3. assert(i=10): text() //we can also include some method where it perforn action mention in text() method  

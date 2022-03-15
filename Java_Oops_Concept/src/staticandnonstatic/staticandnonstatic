@@ -1,0 +1,33 @@
+Static Block is used to implement "Pre requiste" actions where it run before main class
+It is a small set of Instruction where methods are set of instruction contains lots of action 
+As it run before main method can we try static block without main method ?
+No we cannot try static block without main method
+
+Non static block runs "only after creation of instance in main class" and the sequence will be 
+static block
+non static block 
+main method sysout statement
+If we provide SYSOUT statement before instance creation "Staticandnonstatic sc=new Staticandnonstatic();" then sequence will be 
+static block
+main method sysout statement
+non static block    // it will execute only after creation of instance in main class
+
+if we include more than one static block and block than output will be 
+static block 1  //run only once before main method
+static block 2  //run only once before main method
+Main block Sysout statement  //Main method SYSOUT statement placed before creation of instances
+Non static block1  //Non static block run in order of it declared after instance creation
+Non static block2  //Non static block run in order of it declared after instance creation
+constructor block  //constructor block run once object created where we cannot declare multiple constructor
+Non static block1
+Non static block2
+constructor block
+
+
+DisAdvantages of Static
+The static method can not use non static data member or call non-static method directly.
+this and super cannot be used in static context.
+Access only static type data (static type instance variable).
+Call only static method ,if non-static then compile time error.
+No need the class object to call the static method.
+Cant use this and super keyword otherwise compile time error.

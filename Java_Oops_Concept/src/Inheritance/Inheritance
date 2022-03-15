@@ -1,0 +1,114 @@
+Inheritance -> An object of one class (Child) act as an object of other class (Parent)
+
+Use the keyword super within the overridden method(If subclass (child class) has the same method as declared in the parent class)
+in the child class to use the parent class method. 
+You can only use the keyword within the overridden method though. 
+
+you can only inherit properties from child to parent not from parent to child 
+
+1. Use of super with variables: 
+class Vehicle
+{
+    int maxSpeed = 120;
+}
+  
+/* sub class Car extending vehicle */
+class Car extends Vehicle
+{
+    int maxSpeed = 180;
+    void display()
+    {
+        /* print maxSpeed of base class (vehicle) */
+        System.out.println("Maximum Speed: " + super.maxSpeed);
+    }
+}
+  
+/* Driver program to test */
+class Test
+{
+    public static void main(String[] args)
+    {
+        Car small = new Car();
+        small.display();
+    }
+}
+Output:
+
+Maximum Speed: 120
+In the above example, both base class and subclass have a member maxSpeed. We could access maxSpeed of base class in subclass using super keyword.
+
+2. Use of super with methods: 
+class Person
+{
+    void message()
+    {
+        System.out.println("This is person class");
+    }
+}
+
+class Student extends Person
+{
+    void message()
+    {
+        System.out.println("This is student class");
+    }
+  
+    // Note that display() is only in Student class
+    void display()
+    {
+        // will invoke or call current class message() method
+        message();
+  
+        // will invoke or call parent class message() method
+        super.message();
+    }
+}
+  
+/* Driver program to test */
+class Test
+{
+    public static void main(String args[])
+    {
+        Student s = new Student();
+  
+        // calling display() of Student
+        s.display();
+    }
+}
+Output:
+
+This is student class
+This is person class
+In the above example, we have seen that if we only call method message() then, the current class message() is invoked but with the use of super keyword, message() of superclass could also be invoked.
+
+3. Use of super with constructors: super keyword can also be used to access the parent class constructor. One more important thing is that, ‘’super’ can call both parametric as well as non parametric constructors depending upon the situation. Following is the code snippet to explain the above concept:
+class Person
+{
+    Person()
+    {
+        System.out.println("Person class Constructor");
+    }
+}
+
+class Student extends Person
+{
+    Student()
+    {
+        // invoke or call parent class constructor
+        super();
+  
+        System.out.println("Student class Constructor");
+    }
+}
+
+class Test
+{
+    public static void main(String[] args)
+    {
+        Student s = new Student();
+    }
+}
+Output:
+
+Person class Constructor
+Student class Constructor

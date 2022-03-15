@@ -1,0 +1,54 @@
+Purpose of getter() is to retrive private assigned value
+for eg: 
+public class SBIBank {
+    int MinBalance=2000;	
+}
+
+public class SBICustomer extends SBIBank{
+	public static void main(String[] args) {
+		SBICustomer sbi=new SBICustomer();
+		System.out.println(sbi.MinBalance=3000);  // here customer have the access to change min balance value where it is not correct
+	}											  // here output will be 3000 instead of 2000
+}
+
+To resolve above condition we include getter method (return private variable so no one can change the value of variable outside class). 
+getter() is public returning private variable so we can access outside class without changing the value.
+for eg :
+public class SBIBank {
+    private int MinBalance=2000;
+	public int getMinBalance() {             // getter method is public so we can able to access outside class
+		return MinBalance;					 // It is returning private variable min balance as it is private we cannot ableto change value 
+	}
+}
+
+public class SBICustomer extends SBIBank{
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		SBICustomer sbi=new SBICustomer();
+		System.out.println(sbi.getMinBalance());  //we can call getter method which return private variable so we can oly access with no change
+	}
+}
+
+Purpose of Setter() is updates the value of a variable, while a getter reads the value of a variable.
+
+public class SBIBank {
+    private int EMI=100;
+	public int getEMI()
+	{
+		return EMI;                //As EMI value is private it cannot be viewed outside of class so we using getter method
+	}
+	public void setEMI(int value)  //if we want to uodate the value which we get from getter tan we use setter
+	{
+		if(value>100)
+		this.EMI=value;
+	}
+}
+
+public class SBICustomer extends SBIBank{
+	public static void main(String[] args) {
+		SBICustomer sbi=new SBICustomer();
+		System.out.println(sbi.getEMI());   // Here EMI value is 100;
+		sbi.setEMI(200);                    // Through setter we updating the value of getter value
+		System.out.println(sbi.getEMI());   // After updating its value is 200
+	}
+}

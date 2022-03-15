@@ -1,0 +1,4 @@
+Constructor is to initialize object specific variables(Non static variable). 
+
+Constructor is possible in abstract class 
+where its is not possible in interface because in interface variable are static final by default.

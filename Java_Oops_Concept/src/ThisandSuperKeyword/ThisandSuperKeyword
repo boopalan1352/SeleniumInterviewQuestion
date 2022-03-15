@@ -1,0 +1,45 @@
+1. Difference between this and super 
+
+2. Difference between Implicit constructor call and Explicit constructor call
+Implicit Constructor call - It will automatically call the parent class constructor while creating object in child class (child ch=new child();)
+(ie. It will automatically call parent class "no argument constructor" while creating object in child class, Even though we have argument constructor also it will call only no arg. const.). 
+
+Explicit Constructor call - It will allow user to select which constructor he needs to call explicitly.
+It can be achieved by two ways
+1. giving this(2); single arg parent const. in no arg const of parent class. so while creating object in child class 
+it will call single arg const of parent class const., no arg const. of parent class const and finally it will call child class no arg. const.
+
+2. If you want to call only particular parent class const. than you can give super() keyword with no. of argument or with arg as your wish and 
+call from child class const. it will match with no. of arg specified in child class as mentioned through super() and call parent class const, child class const from where you have called.
+   if your parent class contain this() keyword which call inner class const. than if you try the above scenario of calling parent class const. using super() keyword
+then o/p will be this() parent class const. and super() parent class const mentioned in child class const. and finally child class const. 
+
+3. Difference between this and this()
+this is used to call method child class or inner class 
+this() is used to call constructor child class constructor or inner class constructor
+
+4. Difference between super and super()
+super is used to call method 
+super() is used to call constructor
+
+Important Work flow
+	public Child()    //2. It will reach here 
+	{
+		this(5);      //3. It will check this() means inner class const. with single arg.
+		System.out.println("Child Constructor");
+	}
+	
+	public Child(int j)  //4. inner class const. with single arg
+	{
+		
+		super(5,2);      //5. Inside single arg. const we have super() which mean parent class const with 2 arg. where parent class const may have this() inside class const. 
+		System.out.println("Single Argument Child Constructor");
+	}
+	
+	public static void main(String[] args) {
+		Child child=new Child();  // 1. calling no arg const. while creating object in child class
+		
+output : Single Argument Parent class constructor //frst parent class this() inner class const
+		 two Argument Parent class constructor    //scnd parent class const which called from child class through super keyword
+		 Single Argument Child Constructor        //single arg const wher we use this() in no arg const of child class 
+		 Child Constructor		                  //finally no arg constructor 
